@@ -31,17 +31,18 @@ public class TelaPassGen extends javax.swing.JFrame {
         jMenu4 = new javax.swing.JMenu();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        fieldCaractRandom = new javax.swing.JTextField();
+        BtnGenPass = new javax.swing.JButton();
+        Radio8Caract = new javax.swing.JRadioButton();
+        Radio10Caract = new javax.swing.JRadioButton();
+        BtnSaveBottom = new javax.swing.JButton();
+        BtnCopyBottom = new javax.swing.JButton();
+        BtnExit = new javax.swing.JButton();
+        BtnCleanSelection = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
-        jMenuItem2 = new javax.swing.JMenuItem();
+        BtnSaveMenu = new javax.swing.JMenuItem();
+        BtnCopyMenu = new javax.swing.JMenuItem();
 
         jMenu3.setText("File");
         jMenuBar2.add(jMenu3);
@@ -54,47 +55,85 @@ public class TelaPassGen extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel1.setText("Número de caracteres para sua senha:");
 
-        jTextField1.setText("jTextField1");
+        fieldCaractRandom.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fieldCaractRandomActionPerformed(evt);
+            }
+        });
 
-        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jButton1.setText("Gerar Senha");
+        BtnGenPass.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        BtnGenPass.setText("Gerar Senha");
+        BtnGenPass.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnGenPassActionPerformed(evt);
+            }
+        });
 
-        jRadioButton1.setText("8 caracteres");
+        Radio8Caract.setText("8 caracteres");
+        Radio8Caract.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Radio8CaractActionPerformed(evt);
+            }
+        });
 
-        jRadioButton2.setText("10 caracteres");
+        Radio10Caract.setText("10 caracteres");
+        Radio10Caract.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Radio10CaractActionPerformed(evt);
+            }
+        });
 
-        jButton2.setText("Salvar");
+        BtnSaveBottom.setText("Salvar");
+        BtnSaveBottom.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnSaveBottomActionPerformed(evt);
+            }
+        });
 
-        jButton3.setText("Copiar");
+        BtnCopyBottom.setText("Copiar");
+        BtnCopyBottom.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnCopyBottomActionPerformed(evt);
+            }
+        });
 
-        jButton4.setText("Sair");
+        BtnExit.setText("Sair");
+        BtnExit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnExitActionPerformed(evt);
+            }
+        });
+
+        BtnCleanSelection.setText("Limpar");
+        BtnCleanSelection.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnCleanSelectionActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(10, 10, 10)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(BtnGenPass, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel1)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jRadioButton1)
-                                .addGap(30, 30, 30)
-                                .addComponent(jRadioButton2)
-                                .addGap(45, 45, 45)
-                                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addComponent(Radio8Caract)
+                        .addGap(30, 30, 30)
+                        .addComponent(Radio10Caract)
+                        .addGap(45, 45, 45)
+                        .addComponent(fieldCaractRandom, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addComponent(jButton2)
-                        .addGap(65, 65, 65)
-                        .addComponent(jButton3)
+                        .addComponent(BtnSaveBottom)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(BtnCopyBottom)
+                        .addGap(18, 18, 18)
+                        .addComponent(BtnCleanSelection)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton4)))
+                        .addComponent(BtnExit)))
                 .addContainerGap(10, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -104,31 +143,37 @@ public class TelaPassGen extends javax.swing.JFrame {
                 .addComponent(jLabel1)
                 .addGap(22, 22, 22)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jRadioButton1)
-                    .addComponent(jRadioButton2)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Radio8Caract)
+                    .addComponent(Radio10Caract)
+                    .addComponent(fieldCaractRandom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(jButton1)
+                .addComponent(BtnGenPass)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 72, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton2)
-                    .addComponent(jButton3)
-                    .addComponent(jButton4))
+                    .addComponent(BtnSaveBottom)
+                    .addComponent(BtnCopyBottom)
+                    .addComponent(BtnExit)
+                    .addComponent(BtnCleanSelection))
                 .addGap(20, 20, 20))
         );
 
         jMenu1.setText("File");
 
-        jMenuItem1.setText("Salvar");
-        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+        BtnSaveMenu.setText("Salvar");
+        BtnSaveMenu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem1ActionPerformed(evt);
+                BtnSaveMenuActionPerformed(evt);
             }
         });
-        jMenu1.add(jMenuItem1);
+        jMenu1.add(BtnSaveMenu);
 
-        jMenuItem2.setText("Copiar");
-        jMenu1.add(jMenuItem2);
+        BtnCopyMenu.setText("Copiar");
+        BtnCopyMenu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnCopyMenuActionPerformed(evt);
+            }
+        });
+        jMenu1.add(BtnCopyMenu);
 
         jMenuBar1.add(jMenu1);
 
@@ -154,9 +199,47 @@ public class TelaPassGen extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+    private void BtnSaveMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnSaveMenuActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem1ActionPerformed
+    }//GEN-LAST:event_BtnSaveMenuActionPerformed
+
+    private void Radio8CaractActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Radio8CaractActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Radio8CaractActionPerformed
+
+    private void Radio10CaractActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Radio10CaractActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Radio10CaractActionPerformed
+
+    private void fieldCaractRandomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldCaractRandomActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_fieldCaractRandomActionPerformed
+
+    private void BtnGenPassActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnGenPassActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BtnGenPassActionPerformed
+
+    private void BtnCopyMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnCopyMenuActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BtnCopyMenuActionPerformed
+
+    private void BtnSaveBottomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnSaveBottomActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BtnSaveBottomActionPerformed
+
+    private void BtnCopyBottomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnCopyBottomActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BtnCopyBottomActionPerformed
+
+    private void BtnExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnExitActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_BtnExitActionPerformed
+
+    private void BtnCleanSelectionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnCleanSelectionActionPerformed
+        Radio8Caract.setText("");
+        Radio10Caract.setText("");
+        fieldCaractRandom.setText("");
+    }//GEN-LAST:event_BtnCleanSelectionActionPerformed
 
     /**
      * @param args the command line arguments
@@ -194,21 +277,22 @@ public class TelaPassGen extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
+    private javax.swing.JButton BtnCleanSelection;
+    private javax.swing.JButton BtnCopyBottom;
+    private javax.swing.JMenuItem BtnCopyMenu;
+    private javax.swing.JButton BtnExit;
+    private javax.swing.JButton BtnGenPass;
+    private javax.swing.JButton BtnSaveBottom;
+    private javax.swing.JMenuItem BtnSaveMenu;
+    private javax.swing.JRadioButton Radio10Caract;
+    private javax.swing.JRadioButton Radio8Caract;
+    private javax.swing.JTextField fieldCaractRandom;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenu jMenu4;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuBar jMenuBar2;
-    private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 }
