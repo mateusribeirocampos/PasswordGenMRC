@@ -2,16 +2,16 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  */
 
-package cursojavabasico.passwordgenmrc;
+package smallproject.passgenmrc;
 
 /**
  *
  * @author Mateus Campos
  */
-public class PasswordGenMRC {
+public class PassGenMRC {
 
     public static void main(String[] args) {
-        TelaPasswordMRC telaPassword = new TelaPasswordMRC();
-        telaPassword.setVisible(true);
+        TelaPassGen telaPrincipal = new TelaPassGen();
+        telaPrincipal.setVisible(true);
     }
 }
